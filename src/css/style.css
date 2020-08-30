@@ -1,6 +1,23 @@
+header {
+  width: 100%;
+  height: 90px;
+  background-color: lightblue;
+  display: flex;
+  position: sticky;
+  top: 0;
+  left: 0;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  z-index: 1040; }
+
 * {
   margin: 0;
   font-family: "Montserrat", sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  box-sizing: border-box; }
+  box-sizing: border-box;
+  font-size: 16px; }
+
+body {
+  height: 1000px; }
 
 /*# sourceMappingURL=style.css.map */
