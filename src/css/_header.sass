@@ -18,7 +18,7 @@ header
     display: flex
     justify-content: flex-start
     .logo
-      width: 55%
+      width: 70%
       height: 100%
 
       display: flex
@@ -26,6 +26,37 @@ header
       justify-content: flex-start
       align-items: center
       margin-left: 10px
+      &__title
+        margin-left: 5px
+        align-content: center
+        a
+          font-style: normal
+          font-weight: 500
+          font-size: $font-size-large
+          color: whitesmoke
+          text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25)
+
+      &__hidden
+        margin-left: 10px
+        transform: translateY(-60px)
+
+        a
+          font-style: normal
+          font-weight: 500
+          font-size: $font-size-large
+          color: black
+          text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25)
+
+      &__hidden--transform
+        transition: all 1s ease
+        transform: translateY(0px)
+
+      &__hidden--color
+        transition: all 1s ease
+        color: white !important
+
+
+
 
   .wrapper-2
     width: 60%
