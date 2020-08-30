@@ -9,7 +9,8 @@ header {
   flex-direction: row;
   align-items: center;
   justify-content: flex-start;
-  z-index: 1040; }
+  z-index: 1040;
+  filter: drop-shadow(0px 9px 9px rgba(0, 0, 0, 0.25)); }
   header .wrapper-1 {
     width: 40%;
     height: 100%;
@@ -25,7 +26,7 @@ header {
       margin-left: 10px; }
       header .wrapper-1 .logo__title {
         margin-left: 5px;
-        align-content: center; }
+        align-items: center; }
         header .wrapper-1 .logo__title a {
           font-style: normal;
           font-weight: 500;
@@ -39,7 +40,7 @@ header {
           font-style: normal;
           font-weight: 500;
           font-size: 32px;
-          color: black;
+          color: #007bff;
           text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25); }
       header .wrapper-1 .logo__hidden--transform {
         transition: all 1s ease;
@@ -53,12 +54,65 @@ header {
     display: flex;
     justify-content: flex-end; }
     header .wrapper-2 .links {
-      width: 35%;
-      height: 90%;
+      max-width: 100%;
+      list-style: none;
+      height: 100%;
       position: relative;
-      background-color: white;
       display: flex;
-      margin-right: 10px; }
+      margin-right: 10px;
+      padding-left: 0;
+      justify-content: center;
+      align-items: center; }
+      header .wrapper-2 .links .links-item {
+        padding-right: 75px;
+        display: flex;
+        position: relative;
+        height: 100%;
+        align-items: center;
+        text-shadow: 2px 5px 3px rgba(0, 0, 0, 0.35);
+        color: white; }
+        header .wrapper-2 .links .links-item a {
+          font-size: 22px;
+          font-style: normal;
+          font-weight: normal; }
+      header .wrapper-2 .links .links-item-cursor {
+        cursor: pointer; }
+        header .wrapper-2 .links .links-item-cursor .dropdown {
+          position: absolute;
+          display: none;
+          top: 100%;
+          right: 1px;
+          width: 400px;
+          height: auto;
+          overflow-y: auto;
+          background-color: #007bff;
+          padding: 10px 0 5px 0;
+          border: 1px solid black;
+          border-top: none;
+          border-bottom-left-radius: 10px;
+          border-bottom-right-radius: 10px;
+          text-align: left;
+          flex-direction: column; }
+          header .wrapper-2 .links .links-item-cursor .dropdown .dropdown-item {
+            display: flex;
+            align-items: center;
+            width: 100%;
+            padding-left: 10px;
+            padding-top: 15px;
+            padding-right: 10px; }
+            header .wrapper-2 .links .links-item-cursor .dropdown .dropdown-item:first-child {
+              padding-top: 0; }
+            header .wrapper-2 .links .links-item-cursor .dropdown .dropdown-item .Twitter {
+              margin-left: auto;
+              font-size: 16px;
+              width: 25%;
+              display: flex;
+              align-items: center;
+              justify-content: flex-end; }
+          header .wrapper-2 .links .links-item-cursor .dropdown .flex-right {
+            align-self: flex-end; }
+        header .wrapper-2 .links .links-item-cursor:hover .dropdown {
+          display: flex; }
 
 * {
   margin: 0;

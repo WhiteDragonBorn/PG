@@ -12,6 +12,7 @@ header
   align-items: center
   justify-content: flex-start
   z-index: 1040
+  filter: drop-shadow(0px 9px 9px rgba(0, 0, 0, 0.25))
   .wrapper-1
     width: 40%
     height: 100%
@@ -28,7 +29,7 @@ header
       margin-left: 10px
       &__title
         margin-left: 5px
-        align-content: center
+        align-items: center
         a
           font-style: normal
           font-weight: 500
@@ -44,7 +45,7 @@ header
           font-style: normal
           font-weight: 500
           font-size: $font-size-large
-          color: black
+          color: $primary
           text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25)
 
       &__hidden--transform
@@ -64,9 +65,68 @@ header
     display: flex
     justify-content: flex-end
     .links
-      width: 35%
-      height: 90%
+      max-width: 100%
+
+      list-style: none
+      height: 100%
       position: relative
-      background-color: white
+
       display: flex
       margin-right: 10px
+      padding-left: 0
+      justify-content: center
+      align-items: center
+      .links-item
+        padding-right: 75px
+        display: flex
+        position: relative
+        height: 100%
+        align-items: center
+        text-shadow: 2px 5px 3px rgba(0, 0, 0, 0.35)
+        color: white
+        a
+          font-size: $font-size-medium
+          font-style: normal
+          font-weight: normal
+      .links-item-cursor
+        cursor: pointer
+
+        .dropdown
+          position: absolute
+          display: none
+          top: 100%
+          right: 1px
+          width: 400px
+          height: auto
+          overflow-y: auto
+          background-color: $primary
+          padding: 10px 0 5px 0
+          border: 1px solid black
+          border-top: none
+          border-bottom-left-radius: 10px
+          border-bottom-right-radius: 10px
+          text-align: left
+          flex-direction: column
+          .dropdown-item
+            display: flex
+            align-items: center
+            width: 100%
+            padding-left: 10px
+            padding-top: 15px
+            padding-right: 10px
+            &:first-child
+              padding-top: 0
+            .Twitter
+              margin-left: auto
+              font-size: $font-size-small
+              width: 25%
+              display: flex
+              align-items: center
+              justify-content: flex-end
+
+          .flex-right
+            align-self: flex-end
+
+        &:hover
+          .dropdown
+            display: flex
